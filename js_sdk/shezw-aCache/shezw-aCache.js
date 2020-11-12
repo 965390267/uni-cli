@@ -321,10 +321,10 @@ const aCache = { // ! 数据缓存 主要自动处理数据请求的缓存以及
 	 * 
 	 * @return Promise
 	 */
-	post:function( apiURL, params, expire, headers ){
+	// post:function( apiURL, params, expire, headers ){
 		
-		return this.request( apiURL, params, expire, headers, 'POST' );
-	},
+	// 	return this.request( apiURL, params, expire, headers, 'POST' );
+	// },
 	
 	/**
 	 * @param {string} apiURL
@@ -333,10 +333,10 @@ const aCache = { // ! 数据缓存 主要自动处理数据请求的缓存以及
 	 * 
 	 * @return Promise
 	 */
-	get:function( apiURL, expire, headers ){
+	// get:function( apiURL, expire, headers ){
 		
-		return this.request( apiURL, null, expire, headers, 'GET' );
-	}
+	// 	return this.request( apiURL, null, expire, headers, 'GET' );
+	// }
 };
 
 

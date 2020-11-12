@@ -2,7 +2,7 @@
 	<view class="home-banner">
 		<swiper class="swiper" circular autoplay interval="5000" previous-margin="50rpx" next-margin="50rpx" @change="onSwiperChange">
 			<swiper-item class="item" v-for="(item, index) in list1" :key="index">
-				<jy-image class="pic" :class="{ current: current === index }" :src="item.image" mode="aspectFill" @click="navTo(item.link)"></jy-image>
+				<image class="pic" :class="{ current: current === index }" :src="item.image" mode="aspectFill" @click="navTo(item.link)"></image>
 			</swiper-item>
 		</swiper>
 		<view class="dots row center"><view class="dot" :class="{ current: current === index }" v-for="(item, index) in list1" :key="index"></view></view>

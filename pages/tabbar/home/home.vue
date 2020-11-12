@@ -30,7 +30,7 @@
       aaa(){}
 		},
 		mounted() {
-			console.log(this);
+			// console.log(this.aCache);
 			// console.log(this.$zzhutil.prePage(1));
 		}
 	}

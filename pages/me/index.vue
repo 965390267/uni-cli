@@ -95,7 +95,7 @@
 			}).catch(e=>{
 				console.log(e);
 			})
-			console.log(this.$http);
+			// console.log(this.$http);
 		}
 	}
 </script>

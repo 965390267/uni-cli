@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+
 import {
 	toast,
 	isLogin,
@@ -11,13 +12,16 @@ import {
 import './router/interrept/index'
 import $http from './request/index.js'
 import ajax from './request/http.config.js'
+import aCache from '@/js_sdk/shezw-aCache/shezw-aCache.js';
+Vue.use(aCache,'yourAppID'); // appID 是可选的
 Vue.prototype.$zzhutil = {
 	toast,
 	isLogin,
 	debounce,
 	throttle,
 	prePage,
-	date
+	date,
+	aCache
 }
 Vue.prototype.$http=$http;
 Vue.prototype.ajax=ajax;

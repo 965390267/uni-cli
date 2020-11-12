@@ -1,4 +1,5 @@
 import Request from '../request/luch-request/index.js' // 下载的插件
+import aCache from '@/js_sdk/shezw-aCache/shezw-aCache.js';
 const http = new Request();
 
 
@@ -20,6 +21,11 @@ http.interceptors.request.use((config) => { // 可使用async await 做异步操
       return Promise.reject(config)
     }
    **/
+     console.log(config);
+   if(aCache.has(config.baseURL)){
+	
+	   return Promise.reject(aCache.get(config.baseURL))
+   }
   return config
 }, config => { // 可使用async await 做异步操作
   return Promise.reject(config)
@@ -31,7 +37,11 @@ http.interceptors.response.use((response) => { /* 对响应成功做点什么 �
  // if (response.config.custom.verification) { // 演示自定义参数的作用
   //   return response.data
   // }
-  console.log(response)
+  const {statusCode,data,config} = response;
+  if(statusCode==200){
+	  // console.log(config.baseURL);
+	  aCache.add(config.baseURL,data)
+  }
   return response
 }, (response) => { /*  对响应错误做点什么 （statusCode !== 200）*/
   console.log(response)

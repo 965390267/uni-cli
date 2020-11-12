@@ -3,7 +3,7 @@ export default {
 
 	getMain(mobile) { //发送验证码
 
-		return $http.post('content/getMain', {
+		return $http.post('', {
 			mobile
 		})
 	},
