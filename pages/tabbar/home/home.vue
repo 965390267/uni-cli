@@ -32,6 +32,11 @@
 		mounted() {
 			// console.log(this.aCache);
 			// console.log(this.$zzhutil.prePage(1));
+			this.$http.HOME.getMain().then(res=>{
+				console.log(res);
+			}).catch(e=>{
+				console.log(e);
+			})
 		}
 	}
 </script>

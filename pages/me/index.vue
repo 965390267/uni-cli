@@ -90,7 +90,7 @@
 			}
 		},
 		onLoad() {
-			this.$http.HOME.getMain().then(res=>{
+			this.$http.ME.getMain().then(res=>{
 				console.log(res);
 			}).catch(e=>{
 				console.log(e);

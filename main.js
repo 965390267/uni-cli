@@ -11,7 +11,7 @@ import {
 } from '@/utils/util.js'
 import './router/interrept/index'
 import $http from './request/index.js'
-import ajax from './request/http.config.js'
+import ajax from './request/request/luch-request/index.js'
 import aCache from '@/js_sdk/shezw-aCache/shezw-aCache.js';
 Vue.use(aCache,'yourAppID'); // appID 是可选的
 Vue.prototype.$zzhutil = {
